@@ -15,6 +15,7 @@ const ExpenseForm = (props) => {
   // });
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
+
     // 좋지 않은 방법
     // setUserInput({ ...userInput, enteredTitle: event.target.value });
     // setUserInput((prevState) => {
@@ -38,7 +39,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
